@@ -1,0 +1,40 @@
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: chat
+    producer:
+      bootstrap-servers: localhost:9092
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+    cache: false
+
+  datasource:
+    url: jdbc:mysql://localhost:3305/chatbot?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 1111
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: 'false'
+        use_sql_comments: 'false'
+        auto_quote_keyword: 'true'
+        show_sql: 'false'
+        default_batch_fetch_size: 10
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+
+server:
+  port: 8070

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Your First WebSocket!</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.2/sockjs.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+          integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+          crossorigin="anonymous"></script>
+</head>
+
+<body>
+<h1 style="text-align: center;">채팅방</h1>
+<br>
+
+<div style="text-align: center;">
+  <form id="chatForm" action="/view/chat" method="get">
+    <input id="msgIdx" type="hidden"/>
+    <label for="user">UserName:</label>
+    <input id="user" name="user" value="" type="text">
+    <label for="room">Room:</label>
+    <input id="room"  name="room" value="" type="text">
+    <br>
+    <button id="next" type="submit">이동</button>
+  </form>
+</div>
+<div id="output"></div>
+</body>
+
+</html>
+<script>
+
+</script>
